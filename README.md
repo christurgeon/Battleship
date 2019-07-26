@@ -1,11 +1,15 @@
-Network Battleship Game Between Client and Server
+# Network Battleship Game
 
-OS: Windows 10
-Java Version: 1.8.0_201
-Script File: Windows Command Prompt (.cmd)
+## Development Information
+* OS: Windows 10
+* Java Version: 1.8.0_201
+* Script File: Windows Command Prompt (.cmd)
 
-Test cases are provided but they just explain the corner cases
-that were tested. There are no text or data files involved in
-this program. All game related data is entered by the users at
-runtime.
+## How to Run
+1. Compile all files in ```src/code/tools```
+2. Run the script in ```/scripts``` or run ```java GUI```
+3. Player 1 is the host and must click wait to connect
+5. Player 1 must create his/her board and send it to the opponent
+6. Once Player 1 has sent the board, Player 2 must run the program and click connect to another when prompted
+
 
