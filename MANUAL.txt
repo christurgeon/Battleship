@@ -1,0 +1,68 @@
+                          ******************************
+                     ******** Follow these carefully ********
+                          ******************************
+
+-  The  host/server/Player1  must construct the board and send the information
+   to the client before the client can try to connect.
+
+-  SERVER == Player 1
+
+   1. SERVER: Run run_game.cmd script and click "Wait for Player to Connect"
+
+   2. SERVER: If no configuration file, you will be prompted to enter board information,
+              you can specify the size of the board, the size of the 5 vessel types
+              and the number of these 5 vessel types that you want.
+
+   3. SERVER: Click "Game" in the menu bar and configure "Network Settings".
+              Enter a port number and a host IP address. To play locally, use the
+              default input! [THE PROGRAM HAS DEFAULT localhost, port 25000]
+
+   4. SERVER: Feel free to edit the countdown timer in the "Game" menu.
+
+   5. SERVER: Click "Game" in the Menu Bar and click "Place Ships", you will
+              now be allowed to place all of your ships on the top board. You may
+              change the orientation to vertical or horizontal by using the
+              check box on the bottom.
+
+              a. If you make a mistake, click Place Ships again and you can place
+              all of your ships again.
+
+              b. When you are ready to play, click "Done Placing Ships"
+
+--------------------------------------------------------------------------------
+ ----- PLAYER 2 CANNOT CONNECT UNTIL PLAYER 1 clicks "Done Placing Ships" -----
+--------------------------------------------------------------------------------
+
+   6. CLIENT: Now have the second player run the script and click
+              "Connect to Another", this player must specify initial network
+              settings and now this player can place all of the ships
+              and click "Done Placing Ships" to send the board back to
+              the host player and the game will begin.
+
+--------------------------------------------------------------------------------
+
+    After each game, a configuration file is written and it contains all of the
+    ships and their relevant sizes and amounts. It also contains the default
+    round timer. The color of the board is not persisted between rounds because
+    it is extremely easy to change. The network settings also do not save but they
+    are easily changed and have localhost default values.
+
+--------------------------------------------------------------------------------
+
+NOTE: Network settings, countdown timer settings, and ship placement cannot
+      be changed when Player 1 successfully sends over the game and Player 2
+      successfully connects to Player 1.
+
+NOTE: The top board is your board and the bottom board is where you try
+      to take down your opponents ships.
+
+NOTE: Delete the configuration file (_CONFIG_.txt) if you want to choose
+      a custom board size and your own ship sizes and count.
+
+NOTE: Only one game can be played. Both users must exit and restart to play again.
+
+--------------------------------------------------------------------------------
+
+Scripts
+ - Run javadoc_script.cmd to compile Javadocs
+ - Run run_game.cmd to compile and begin the game
